@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Local secrets — NEVER commit these
+.env
+
+# Backtest artifacts (optional: keep or ignore)
+backtest_chart.png
+
+# OS junk
+.DS_Store
+
+# NOTE: signal_log.csv and position_state.json are intentionally NOT ignored.
+# They are committed by the GitHub Action so your history lives in the repo.
