@@ -1,0 +1,2 @@
+run_utc,data_date,nifty_close,gold_close,ratio,up_band,dn_band,breakout,prev_position,target_position,decision,action
+2026-05-31T08:50:19+00:00,2026-05-29,267.78,128.65,2.081461,2.231737,2.014878,,GOLD,GOLD,HOLD,HOLD GOLD (no change)
