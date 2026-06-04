@@ -8,6 +8,9 @@ on:
     - cron: "0 12 * * 1-5"   # Mon-Fri, 12:00 UTC = 17:30 IST (5:30 PM)
   workflow_dispatch: {}        # lets you run it manually from the Actions tab
 
+concurrency: 
+  group: etf-signal-automation
+  cancel-in-progress: false
 # Allow the workflow to commit the updated CSV log + state back to the repo
 permissions:
   contents: write
@@ -54,5 +57,6 @@ jobs:
             echo "No changes to commit."
           else
             git commit -m "signal: update log & state [skip ci]"
-            git push
+            git pull --rebase origin main
+            git push origin main
           fi
